@@ -17,15 +17,19 @@
             padding: 20px;
         }
 
-       .qr-code img {
-    width: 150px;  /* Reduce size */
-    height: 150px; /* Reduce size */
-    border-radius: 5px;
-}
+       .qr-code {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+        }
 
-        .qr-container img {
-            width: 200px; /* Adjust the size as needed */
-            height: 200px;
+
+        .qr-code img {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px;
             border-radius: 5px;
         }
 
@@ -99,6 +103,8 @@
         let upiLink = `upi://pay?pa=${upiID}&pn=${name}&tn=Order Payment&am=${totalAmount}&cu=INR`;
 
         document.getElementById("upi-link").href = upiLink;
+        let qrURL = `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(upiLink)}`;
+
     </script>
                 
 </body>
