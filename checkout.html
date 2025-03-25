@@ -17,14 +17,11 @@
             padding: 20px;
         }
 
-        .qr-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            margin-top: 20px;
-        }
+       .qr-code img {
+    width: 150px;  /* Reduce size */
+    height: 150px; /* Reduce size */
+    border-radius: 5px;
+}
 
         .qr-container img {
             width: 200px; /* Adjust the size as needed */
@@ -75,18 +72,7 @@
     <a id="upi-link" href="#" target="_blank">
         <button>Pay via UPI</button>
     </a>
-
-    <script>
-        // Get the total amount dynamically from the page or backend
-        let totalAmount = document.getElementById("amount").innerText;
-        let upiID = "6382318369@ptsbi";
-        let name = "Pavitthrah.p";
-
-        let upiLink = `upi://pay?pa=${upiID}&pn=${name}&tn=Order Payment&am=${totalAmount}&cu=INR`;
-
-        document.getElementById("upi-link").href = upiLink;
-    </script>
-                <h2>Scan & Pay via Paytm</h2>
+            <h2>Scan & Pay via Paytm</h2>
                 <div class="qr-code">
                     <img src="img/qr/qrcode.jpg" alt="Scan to Pay">
                 </div>
@@ -103,5 +89,17 @@
             <button type="submit" class="confirm-btn">Proceed to Confirm Order ✅</button>
         </form>
     </div>
+
+    <script>
+        // Get the total amount dynamically from the page or backend
+        let totalAmount = document.getElementById("amount").innerText;
+        let upiID = "6382318369@ptsbi";
+        let name = "Pavitthrah.p";
+
+        let upiLink = `upi://pay?pa=${upiID}&pn=${name}&tn=Order Payment&am=${totalAmount}&cu=INR`;
+
+        document.getElementById("upi-link").href = upiLink;
+    </script>
+                
 </body>
 </html>
