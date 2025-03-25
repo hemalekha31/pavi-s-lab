@@ -29,12 +29,23 @@
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
             
-            <label for="payment">Payment Method:</label>
-            <select id="payment" name="payment">
-                <option value="online">Online Payment</option>
-            </select>
-            <div class="checkout-container">
-                <h2>Complete Your Payment</h2>
+            <h2>Order Summary</h2>
+    <p>Total Amount: ₹<span id="amount">500</span></p>
+
+    <a id="upi-link" href="#" target="_blank">
+        <button>Pay via UPI</button>
+    </a>
+
+    <script>
+        // Get the total amount dynamically from the page or backend
+        let totalAmount = document.getElementById("amount").innerText;
+        let upiID = "6382318369@ptsbi";
+        let name = "Pavitthrah.p";
+
+        let upiLink = `upi://pay?pa=${upiID}&pn=${name}&tn=Order Payment&am=${totalAmount}&cu=INR`;
+
+        document.getElementById("upi-link").href = upiLink;
+    </script>
                 <h2>Scan & Pay via Paytm</h2>
                 <div class="qr-code">
                     <img src="img/qr/qrcode.jpg" alt="Scan to Pay">
