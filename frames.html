@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames - Pavis Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* Adjust height dynamically */
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%; /* Ensures full width */
+    height: auto; /* Prevents cropping */
+    max-height: 400px; /* Adjust max height if needed */
+    object-fit: contain; /* Prevents cutting off parts of the image */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+    </style>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <div class="top-banner">
+        Beautiful Frames 🖼️ for Every Occasion 🎁 with LOVE ❤️
+    </div>
+
+    <nav class="nav-bar">
+        <div class="left-icons">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#" class="wishlist-icon">
+                <i class="fa fa-heart"></i>
+            </a>
+            <a href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Logo" class="logo">
+        </div>
+        <div class="social-icons">
+            <a href="#" @click.prevent="handleAccountClick"><i class="fa fa-user"></i></a>
+            <a href="#" id="cartIcon"><i class="fa fa-shopping-cart"></i></a>
+            <a href="https://wa.me/919363157429" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/pavi_s_lab?igsh=d2R0ZWNsMWJoYTNm" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <div class="category-section">
+        <a href="index.html">CATEGORY</a>
+        <a href="frames.html" class="active">Frames</a>
+        <a href="hamper.html">Hampers</a>
+        <a href="keychain.html">Keychains</a>
+        <a href="greetingcard.html">Greeting Card</a>
+        <a href="photosgift.html">Photos Gift</a>
+        <a href="minaiture.html">Miniature</a>
+        <a href="slambook.html">Slam Book</a>
+        <a href="returngifts.html">Return Gifts</a>
+    </div>
+
+    <div class="product-section">
+        <div class="customized-gifts">
+            <h2>FRAME COLLECTION 🖼️</h2>
+            <p>Decorate Your Memories!</p>
+        </div>
+        
+        <!-- Swiper Container -->
+        
+    </div>
+
+    <div class="product-name">
+        <h2 class="new-launch">New Frame Designs</h2>
+</div>
+<div class="product-container">
+        <!-- Frame Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/frames/a5.jpg" alt="Frame 1">
+            </div>
+            <div class="product-info">
+                <h3 class="brand-name">PAVI'S LAB <span>🖼️</span></h3>
+                <h1 class="product-name">A5 Photo Frame</h1>
+                <p class="old-price">Rs:<del>800/-</del></p>
+                <p class="new-price">Rs: <span>499/-</span></p>
+
+                <div class="buttons">
+                    <button class="buy-btn" onclick="goToCheckout()">Buy 🛍️</button>
+                    <button class="cart-btn">Cart 🛒</button>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#" class="share-btn"><i class="fa-solid fa-share"></i></a>
+                    <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="wishlist-btn"><i class="fa fa-heart"></i></a>
+                </div>  
+            </div>
+        </div>
+
+        <!-- Frame Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/frames/a4.jpg" alt="Frame 2">
+            </div>
+            <div class="product-info">
+                <h3 class="brand-name">PAVI'S LAB <span>🖼️</span></h3>
+                <h1 class="product-name">A4 Photo Frame</h1>
+                <p class="old-price">Rs:<del>750/-</del></p>
+                <p class="new-price">Rs: <span>650/-</span></p>
+
+                <div class="buttons">
+                    <button class="buy-btn" onclick="goToCheckout()">Buy 🛍️</button>
+
+                    <button class="cart-btn">Cart 🛒</button>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#" class="share-btn"><i class="fa-solid fa-share"></i></a>
+                    <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="wishlist-btn"><i class="fa fa-heart"></i></a>
+                </div>  
+            </div>
+        </div>
+    
+    <!-- Frame Product 3 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="img/frames/mini.jpg" alt="Frame 2">
+        </div>
+        <div class="product-info">
+            <h3 class="brand-name">PAVI'S LAB <span>🖼️</span></h3>
+            <h1 class="product-name">Mini  Frame</h1>
+            <p class="old-price">Rs:<del>350/-</del></p>
+            <p class="new-price">Rs: <span>300/-</span></p>
+
+            <div class="buttons">
+                <button class="buy-btn" onclick="goToCheckout()">Buy 🛍️</button>
+
+                <button class="cart-btn">Cart 🛒</button>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#" class="share-btn"><i class="fa-solid fa-share"></i></a>
+                <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="wishlist-btn"><i class="fa fa-heart"></i></a>
+            </div>  
+        </div>
+    </div>
+
+<!-- Frame Product 4 -->
+<div class="product-card">
+    <div class="product-image">
+        <img src="img/book frame/book1.jpg" alt="Frame 2">
+    </div>
+    <div class="product-info">
+        <h3 class="brand-name">PAVI'S LAB <span>🖼️</span></h3>
+        <h1 class="product-name">Book Photo Frame</h1>
+        <p class="old-price">Rs:<del>800/-</del></p>
+        <p class="new-price">Rs: <span>550/-</span></p>
+
+        <div class="buttons">
+            <button class="buy-btn" onclick="goToCheckout()">Buy 🛍️</button>
+
+            <button class="cart-btn">Cart 🛒</button>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#" class="share-btn"><i class="fa-solid fa-share"></i></a>
+            <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="wishlist-btn"><i class="fa fa-heart"></i></a>
+        </div>  
+    </div>
+</div>
+    </div>
+
+    
+    
+    <!-- Wishlist Modal -->
+    <div id="wishlistModal" class="wishlist-modal">
+        <div class="wishlist-content">
+            <span class="close-wishlist">&times;</span>
+            <h3>Your Wishlist</h3>
+            <div class="wishlist-items"></div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items"></div>
+            <button class="checkout-btn">Proceed to Checkout 💳</button>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="frames-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>PAVI'S LAB - Frames Collection 🖼️</h3>
+                <p>Timeless frames to preserve your best memories! ❤️</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="frames.html">Frames</a></li>
+                    <li><a href="#photo-frames">Photo Frames</a></li>
+                    <li><a href="#custom-frames">Customized Frames</a></li>
+                    <li><a href="#gift-frames">Gift Frames</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fa fa-phone"></i> +91 9363157429</p>
+                <p><i class="fa fa-envelope"></i> pavislab@gmail.com</p>
+                <p><i class="fa fa-map-marker-alt"></i> Tamil Nadu, India</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-social-icons">
+                    <a href="https://wa.me/919363157429" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/pavi_s_lab?igsh=d2R0ZWNsMWJoYTNm" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 PAVI'S LAB - Frames Collection | All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Pavis Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="top-banner">
+        Secure Your Order - Complete Checkout 🛍️
+    </div>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back</a>
+    </nav>
+
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form action="order_confirmation.html" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="online">Online Payment</option>
+            </select>
+            <div class="checkout-container">
+                <h2>Complete Your Payment</h2>
+                
+                <div class="qr-code">
+                    <img src="img/qr-code.png" alt="Scan to Pay">
+                </div>
+            
+                <p>Scan the QR code above to make the payment.</p>
+            
+                <form id="paymentForm">
+                    <label for="transactionId">Enter Transaction ID:</label>
+                    <input type="text" id="transactionId" placeholder="Enter Payment Transaction ID" required>
+                    
+                    <button type="submit" class="checkout-btn">Confirm Payment</button>
+                </form>
+            </div>
+            
+            
+            <button type="submit" class="confirm-btn">Proceed to Confirm Order ✅</button>
+        </form>
+    </div>
+</body>
+</html>
